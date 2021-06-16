@@ -51,6 +51,7 @@ app.post('/sendemail', async (req, res) => {
     var transporter = nodemailer.createTransport(smtpTransport({
         service: 'gmail',
         host: 'smtp.gmail.com',
+        secure: true,
         auth: {
             user: process.env.USER,
             pass: process.env.PASS
